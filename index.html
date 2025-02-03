@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshen Karunathilaka - Web Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">OK.</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-blue-600">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-blue-600">Skills</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm <span class="gradient-text">Oshen</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                A passionate web developer and designer creating modern digital experiences
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                    View Projects
+                </button>
+                <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition duration-300">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-600 mb-6">
+                    Currently pursuing a BSc Hons in Information Systems at Sabaragamuwa University of Sri Lanka, 
+                    I combine my passion for technology and design to create compelling web experiences.
+                </p>
+                <p class="text-gray-600">
+                    With expertise in frontend and backend development, I've worked on various projects 
+                    from travel websites to e-commerce platforms, always focusing on creating intuitive 
+                    and visually appealing solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 bg-blue-100 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Pituwa.lk</h3>
+                    <p class="text-gray-600 mb-4">An online buying and selling platform with modern features</p>
+                    <div class="flex space-x-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Laravel</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">MySQL</span>
+                    </div>
+                </div>
+                <div class="project-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 bg-blue-100 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Play Box</h3>
+                    <p class="text-gray-600 mb-4">Interactive gaming website with social features</p>
+                    <div class="flex space-x-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CSS3</span>
+                    </div>
+                </div>
+                <div class="project-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 bg-blue-100 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Poster</h3>
+                    <p class="text-gray-600 mb-4">Microblogging platform with real-time features</p>
+                    <div class="flex space-x-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Laravel</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Vue.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Skills & Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <span class="text-blue-600 font-bold">HTML</span>
+                    </div>
+                    <p class="text-gray-600">HTML5</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <span class="text-blue-600 font-bold">CSS</span>
+                    </div>
+                    <p class="text-gray-600">CSS3</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <span class="text-blue-600 font-bold">JS</span>
+                    </div>
+                    <p class="text-gray-600">JavaScript</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <span class="text-blue-600 font-bold">PHP</span>
+                    </div>
+                    <p class="text-gray-600">Laravel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        gsap.from('.project-card', {
+            duration: 1,
+            y: 60,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.project-card',
+                start: 'top bottom-=100',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    </script>
+</body>
+</html>
